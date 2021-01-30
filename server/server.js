@@ -31,6 +31,17 @@ app.get('/workspace-api/workspaces/:id', async (req, res) => {
 
 })
 
+app.get('/api/workspace-description/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const{ data } = await axios.get(`http://localhost:6060/api/workspace-description/${id}`);
+    res.json(data);
+  } catch (error) {
+    res.status(404).json()
+  }
+})
+
+
 app.use('/', express.static(path.join(__dirname, '../', 'client', 'dist')));
 const PORT = process.env.PORT || 5000;
 
