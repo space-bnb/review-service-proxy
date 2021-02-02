@@ -21,7 +21,7 @@
     } 
 
     @media screen and (max-width: 1000px) {
-      .proxy-container {
+      .proxy-container-columns {
         display: block;
       }
 
@@ -35,18 +35,20 @@
       height: 100%;
     }
   </style>
+  <link rel="stylesheet" href="reset.css">
 </head>
 <body>
   <div class="proxy-container">
     <div class="proxy-container-columns">
       <div class="col-1">
         <div id="workspace-description"></div>
-        <div id="workspaces"></div>
+        <div id="app"></div>
+        <div id="location-service"></div>
         <div id="reviews"></div>
         <div id="nearby"></div>
       </div>
       <div class="col-2">
-        <div id="app"></div>
+        <div id="contact-service"></div>
       </div>
     </div>
   </div>
@@ -55,6 +57,7 @@
 <script src="https://kit.fontawesome.com/bb32e62705.js" crossorigin="anonymous"></script>
 <script src="http://localhost:6060/workspace-description.js"></script>
 <script src="http://localhost:4000/workspaces.js"></script>
+<script src="http://localhost:3002/main.js"></script>
 <script src="http://localhost:3001/main.js"></script>
 <script src="http://localhost:5001/nearby.js"></script>
 <script src="http://localhost:5002/reviews.js"></script>
