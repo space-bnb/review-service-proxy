@@ -18,10 +18,10 @@ app.get('/api/availability', async (req, res) => {
 });
 
 
-app.get('/workspace-api/workspaces/:id', async (req, res) => {
+app.get('/workspace-api/workspace/:id', async (req, res) => {
   const { id } = req.params;
   try {
-    const { data } = await axios.get(`http://localhost:5000/workspace-api/workspaces/${id}`);
+    const { data } = await axios.get(`http://localhost:4000/workspace-api/workspace/${id}`);
     console.log(res);
     res.json(data);
   } catch (err) {
