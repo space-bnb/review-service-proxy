@@ -1,0 +1,50 @@
+const path = require('path')
+const express = require('express');
+const app = express();
+const axios = require('axios');
+
+app.use('/buildings/:workspaceId', express.static(path.join(__dirname, '../', 'client', 'dist')));
+
+app.get('/api/availability', async (req, res) => {
+  try {
+    const { id } = req.query;
+    const { data } = await axios.get(`http://localhost:3001/api/availability?id=${id}`);
+    console.log(data);
+    res.json(data);
+  } catch (err) {
+    console.log(err);
+    res.status(err.status).json({success: false, status: err.status, message: err.message || 'There was an error'})
+  }
+});
+
+
+app.get('/workspace-api/workspace/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const { data } = await axios.get(`http://localhost:4000/workspace-api/workspace/${id}`);
+    console.log(res);
+    res.json(data);
+  } catch (err) {
+    console.log(error);
+    res.json(err);
+  }
+
+})
+
+app.get('/api/workspace-description/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const{ data } = await axios.get(`http://localhost:6060/api/workspace-description/${id}`);
+    res.json(data);
+  } catch (error) {
+    res.status(404).json()
+  }
+})
+
+
+app.use('/', express.static(path.join(__dirname, '../', 'client', 'dist')));
+const PORT = process.env.PORT || 5000;
+
+exports.server = app.listen(PORT, console.log('app running'));
+exports.app = app;
+
