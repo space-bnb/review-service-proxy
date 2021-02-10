@@ -16,7 +16,7 @@
       width: 100%;
       height: 100%;
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 70% 30%;
       grid-gap: 15px; 
     } 
 
@@ -35,12 +35,14 @@
       height: 100%;
     }
   </style>
-  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://spacework-bundles.s3-us-west-1.amazonaws.com/reset.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
   <div class="proxy-container">
     <div class="proxy-container-columns">
       <div class="col-1">
+        <div id="photos-slider"></div>
         <div id="workspace-description"></div>
         <div id="app"></div>
         <div id="location-service"></div>
@@ -56,9 +58,10 @@
 </body>
 <script src="https://kit.fontawesome.com/bb32e62705.js" crossorigin="anonymous"></script>
 <script src="http://localhost:6060/workspace-description.js"></script>
+<script src="http://localhost:6001/photos-slider.js"></script>
 <script src="http://localhost:4000/workspaces.js"></script>
 <script src="http://localhost:3002/main.js"></script>
 <script src="http://localhost:3001/main.js"></script>
-<script src="http://localhost:5001/nearby.js"></script>
-<script src="http://localhost:5002/reviews.js"></script>
+<script src="https://spacework-bundles.s3-us-west-1.amazonaws.com/nearby.js"></script>
+<script src="https://spacework-bundles.s3-us-west-1.amazonaws.com/reviews.js"></script>
 </html>
