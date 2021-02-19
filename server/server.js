@@ -14,9 +14,9 @@ app.get('/api/workspace-description/:id', forwardingController(process.env.DESCR
 app.get('/api/nearbyworkspaces/buildings/:id', forwardingController(process.env.NEARBY_API, 5001));
 app.get('/api/getNearbyTransitOptions/:id', forwardingController(process.env.LOCATION_API, 3002));
 app.get('/api/reviews/:route/:id', forwardingController(process.env.REVIEW_API, 5002));
-
+app.use(express.static(path.join(__dirname, '../', 'client', 'dist')));
 app.use((err, req, res, next) => {
-  consle.log(err.message);
+  console.log(err.message);
   res.json();
 });
 
