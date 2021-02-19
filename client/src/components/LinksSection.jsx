@@ -46,7 +46,7 @@ export default () => {
             <LanguageLabel >Language</LanguageLabel>
             <LanguageOption href="#" value={lang} onClick={(e) => {e.preventDefault(); handleDropdown()}}>
                 { lang } 
-              <span className="ml-auto"><i class={`fas fa-caret-${dropdown ? 'up': 'down'}`}></i>
+              <span className="ml-auto"><i className={`fas fa-caret-${dropdown ? 'up': 'down'}`}></i>
               </span>
             </LanguageOption>
             { dropdown && LANGUAGES.filter(language => language !== lang).map(language => (

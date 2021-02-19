@@ -1,5 +1,6 @@
 import React from 'react';
 import LinksSection from './LinksSection.jsx';
+import AllLocations from './AllLocations.jsx';
 import { FooterSocial } from './StyledComponents.jsx';
 
 

@@ -30,7 +30,6 @@ export const BreadCrumbLI= styled.li`
 
 export const FooterBG = styled.div`
   width: 100%;
-  height: 400px;
   background: rgb(247,247,247);
 `;
 
@@ -57,13 +56,7 @@ export const FooterInfoLink = styled.li`
   font-family: sans-serif;
   margin-bottom: 12px;
   font-size: .95rem;
-  a {
-    color: #4f0000;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+  color: #4f0000;
 `;
 
 export const FooterBottomRow = styled.div`
@@ -104,8 +97,8 @@ export const FooterSocial = styled.div`
   }
 
   .social-links{
-    color: #4f0000;
-    font-size: 1.3rem;
+    color: black;
+    font-size: 1.1rem;
     margin-left: 40px;
   }
 
@@ -151,7 +144,7 @@ export const Closing = styled.div`
 `;
 
 export const Contact = styled.div`
-  
+
 `;
 
 
