@@ -1,7 +1,8 @@
 import React from 'react';
-import { ProxyContainer, FooterBG, BreadCrumbContainer, BreadCrumbUL, BreadCrumbLI, BracketR, FooterFirstRow,  FooterBottomRow } from './StyledComponents.jsx';
+import { ProxyContainer, FooterBG, BreadCrumbContainer, BreadCrumbUL, BreadCrumbLI, BracketR, FooterFirstRow } from './StyledComponents.jsx';
 import FooterSocialBlock from './FooterSocialBlock.jsx';
 import AllLocations from './AllLocations.jsx';
+import Closing from './Closing.jsx';
 
 import { Listify, COMPANY, PARTNERSHIPS, IMPACT, SUPPORT } from './FooterInfo.jsx';
 
@@ -36,8 +37,7 @@ export default () => {
               <FooterSocialBlock />
             </FooterFirstRow>
             <AllLocations />
-            <FooterBottomRow >
-            </FooterBottomRow>
+            <Closing />
       </ProxyContainer>
     </FooterBG>
     

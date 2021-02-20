@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 export const ProxyContainer = styled.div`
   margin: auto;
-  width: 90%;
-  max-width: 1200px;
+  width: 94%;
+  max-width: 1300px;
 `;
 
 export const BreadCrumbContainer = styled.div`
@@ -137,11 +137,7 @@ export const SelectContainer = styled.div`
   border: 1px solid ${props => props.theme.langHighlight};
 `;
 
-export const Closing = styled.div`
-  padding: 45px 0px 45px 0px;
-  display: flex;
-  justify-content: space-between;
-`;
+
 
 export const Contact = styled.div`
 

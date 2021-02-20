@@ -12,7 +12,7 @@ const sections = [
 
 
 export default () => {
-  const [dropdown, setDropdown] = useState(true);
+  const [dropdown, setDropdown] = useState(false);
   const [section, setSection] = useState(0);
   const handleDropDown = (e) => {
     e.preventDefault();
