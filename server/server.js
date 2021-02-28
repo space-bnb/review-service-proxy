@@ -9,7 +9,7 @@ app.get('/api/availability', forwardingController(process.env.CONTACT_API, 3001)
 app.get('/workspace-api/workspace/:id', forwardingController(process.env.WORKSPACE_API, 4000));
 app.get('/api/photos/:id', forwardingController(process.env.PHOTOS_API, 6001));
 app.get('/api/photos/workspace/:id', forwardingController(process.env.PHOTOS_API, 6001));
-app.get('/amenities-api/amenity/:id', forwardingController(process.env.AMENITIES_API, 4001));
+app.get('/amenities-api/amenity/:id', forwardingController(process.env.AMENITIES_API, 4002));
 app.get('/api/workspace-description/:id', forwardingController(process.env.DESCRIPTION_API, 6060));
 app.get('/api/nearbyworkspaces/buildings/:id', forwardingController(process.env.NEARBY_API, 5001));
 app.get('/api/getNearbyTransitOptions/:id', forwardingController(process.env.LOCATION_API, 3002));
