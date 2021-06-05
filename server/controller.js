@@ -8,7 +8,6 @@ module.exports =  (serviceUrl = '', localPort = 0) => async (req, res, next) => 
   }
   const base = serviceUrl || `http://localhost:${localPort}`;
   const { originalUrl } = req;
-  console.log(`Forwarding: ${originalUrl} to:${base}`);
   
   try {
     const { data } = await axios.get(`${base}${originalUrl}`);
